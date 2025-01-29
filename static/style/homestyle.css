@@ -1,0 +1,81 @@
+body {
+    background-color: black !important;
+
+}
+
+.navbar {
+    background-color: rgba(91, 91, 91, 0.5) !important;
+}
+
+.navbar_container_fluid {
+    /* width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important; */
+    padding: 0 !important;
+}
+
+.navbar_container_wrapper {
+    /* width: 100% !important; */
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.logo_img_container {
+    width: 90px;
+
+}
+
+.logo_img {
+    width: 90px;
+}
+
+.navbar-toggler {
+    border: 1px solid white;
+}
+.navbar-toggler-icon {
+    border: 1px solid white;
+    background-color: white;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255); /* White text */
+}
+
+/* Hover state (black text on hover) */
+.nav-link:hover {
+    color: black; /* Black text when hovering */
+}
+
+/* Active state (custom color) */
+.nav-link.active {
+    color: #edafa4 !important; /* Change this to any color you want for the active state */
+}
+
+
+#carouselExampleAutoplaying .carousel-inner {
+    height: 100%;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    object-fit: cover; 
+    height: 100%; 
+    width: 100%; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
