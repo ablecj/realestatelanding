@@ -22,7 +22,7 @@ body {
 
 .logo_img_container {
     width: 90px;
-
+    margin-left: 5rem;
 }
 
 .logo_img {
@@ -61,6 +61,177 @@ body {
     height: 100%; 
     width: 100%; 
 }
+/* disabling the navigation arrow */
+.carousel-control-next-icon {
+    display: none;
+}
+.carousel-control-prev-icon {
+    display: none;
+}
+
+/* .carousel-item img {
+    filter: opacity(50%);
+    
+} */
+.carousel-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    z-index: 2; 
+    color: white; 
+    display: flex;
+    align-items: center;
+}
+
+/* about_title */
+.about_title {
+    color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+.about_para {
+    color: rgb(240, 240, 240);
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+    text-align: justify;               
+}
+.about_link {
+    background-color: rgb(32, 139, 15);
+    color: rgb(240, 240, 240);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    font-weight: 700;
+}
+.about_link:hover {
+    border-radius: 5px;
+    border: 1px solid white;
+    opacity: 45%;
+   
+}
+/* our_services_title */
+.our_services_title {
+    color: rgb(240, 240, 240);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+}
+/* card */
+.card {
+    padding: 5px;
+    
+}
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(239, 253, 255, 0.2), 0 6px 20px 0 rgba(218, 241, 246, 0.19);
+}
+
+/* card-img-top */
+.card-img-top{
+    height: 200px;
+    transition: transform 0.5s ease;
+}
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+.card-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+    font-weight: 500;
+
+}
+
+/* contact us  */
+.contact_us_bg_img {
+    position: relative; /* Ensures the overlay is positioned correctly */
+    background-image: url('/static/images/service/2.jpg'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 500px; /* Adjust height as needed */
+}
+
+/* Overlay Effect */
+.contact_us_bg_img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50% darkness) */
+    z-index: 1;
+}
+
+/* Ensure Content is Above the Overlay */
+.contact_us_bg_img > * {
+    position: relative;
+    z-index: 2;
+}
+
+.form_container{
+    z-index: 9;
+}
+.form_layer {
+    box-shadow: 0 4px 8px 0 rgba(166, 164, 164, 0.2), 0 6px 20px 0 rgba(164, 163, 163, 0.19);
+}
+.contact_us_title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    font-weight: 500;
+    color: rgb(75, 75, 75);
+}
+
+.contact_section {
+    color: rgb(240, 240, 240);
+}
+.phone_no {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+.phone_no:hover {
+    color: rgb(3, 63, 192);
+    text-decoration: underline;
+}
+.email {
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+}
+.email:hover{
+    color: rgb(3, 63, 192);
+    text-decoration: underline;
+}
+
+
+/* footer */
+footer {
+    background-color: #2d2d2d;  /* Gray background color */
+}
+
+.text-slate-400 {
+    color: rgb(156, 163, 175);  /* Slate color in rgb format */
+}
+
+footer p {
+    margin-bottom: 0;
+}
 
 
 
@@ -71,6 +242,60 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .contact_us_bg_img {
+        min-height: 100vh;
+    }
+    .form_wrapper {
+        width: 90% !important;
+    }
+    .form_container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .form_layer {
+        width: 100%;
+    }
+    .right_section {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+    }
+    .logo_img_container{
+        margin-left: 1rem;
+    }
+
+}
 
 
 
