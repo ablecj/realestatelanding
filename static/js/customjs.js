@@ -19,4 +19,19 @@ $(document).ready(function () {
             console.error('Error loading navbar:', error); // Handle any errors
         }
     });
+
+    // writing the function to set the actve links dynamically
+    // let currentUrl = window.location.pathname;
+
+    // $(".nav-link").each(function () {
+    //     let linkPath = $(this).attr("href");
+
+    //     // Normalize paths to avoid mismatches
+    //     if (linkPath && currentUrl.endsWith(linkPath)) {
+    //         $(this).addClass("active");
+    //     } else {
+    //         $(this).removeClass("active");
+    //     }
+    // });
+
 });

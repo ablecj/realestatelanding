@@ -31,6 +31,7 @@ body {
 
 .navbar-toggler {
     border: 1px solid white;
+    margin-right: 10px;
 }
 .navbar-toggler-icon {
     border: 1px solid white;
@@ -47,7 +48,7 @@ body {
 }
 
 /* Active state (custom color) */
-.nav-link.active {
+.nav-link:active {
     color: #edafa4 !important; /* Change this to any color you want for the active state */
 }
 
@@ -275,13 +276,20 @@ footer p {
     .contact_us_bg_img {
         min-height: 100vh;
     }
+    .carousel-caption h1 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: small;
+        font-weight: 500;
+        font-style: normal;
+    }
     .form_wrapper {
         width: 90% !important;
     }
     .form_container{
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        height: 100vh;
+        justify-content: space-around !important;
     }
     .form_layer {
         width: 100%;
